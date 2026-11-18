@@ -1,0 +1,16 @@
+{
+  "name": "Keithpod",
+  "version": "0.3.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "keithpod-waveshare_amoled206-factory.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

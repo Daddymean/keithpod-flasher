@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flash Keithpod</title>
+  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1.2rem; background: #111; color: #eee; line-height: 1.45; }
+    h1 { font-weight: 650; }
+    ol { padding-left: 1.2rem; }
+    li { margin: 0.4rem 0; }
+    code, kbd { background: #222; padding: 0.1rem 0.35rem; border-radius: 4px; }
+    .card { background: #1b1b1b; border: 1px solid #333; border-radius: 12px; padding: 1rem 1.1rem; margin: 1.2rem 0; }
+    .warn { color: #f6c34a; }
+    a { color: #8ec8ff; }
+    esp-web-tools-install-button { display: block; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Flash Keithpod</h1>
+  <p>Install Keithpod on the <strong>Waveshare ESP32-S3-Touch-AMOLED-2.06</strong> watch. Use <strong>desktop Chrome or Edge</strong> (Web Serial). A USB-C <em>data</em> cable is required.</p>
+
+  <div class="card">
+    <ol>
+      <li>Plug the watch in with USB-C.</li>
+      <li>Click <strong>Connect</strong>, pick the watch's port, then <strong>Install</strong>.</li>
+      <li>If no port appears, hold <kbd>BOOT</kbd>, tap <kbd>PWR</kbd>, release <kbd>BOOT</kbd>, then Connect again.</li>
+      <li>When Chrome asks for Wi-Fi, enter your home <strong>2.4 GHz</strong> network. Leave the server URL unset for now.</li>
+      <li>If that dialog does not appear, join the open Wi-Fi <strong>Keithpod-setup</strong> on your phone, open <a href="http://192.168.4.1">http://192.168.4.1</a>, and enter Wi-Fi there. Copy the device secret shown on that page.</li>
+    </ol>
+    <esp-web-tools-install-button manifest="./manifest.json"></esp-web-tools-install-button>
+    <p class="warn">First flash: erasing is fine. Do <strong>not</strong> erase when updating, or the watch forgets Wi-Fi and the device secret, and clips already on the card can no longer be decrypted.</p>
+  </div>
+
+  <p>After flashing, a FAT32 microSD card (32 GB or smaller is simplest) lets the watch save clips until a server is set up. Serial logs are at <strong>115200</strong> baud if anything looks wrong.</p>
+  <p>This page is static, costs nothing, and stores no secrets. Firmware source and longer notes live with the keithpod firmware tree (<code>FIRMWARE.md</code>).</p>
+</body>
+</html>
