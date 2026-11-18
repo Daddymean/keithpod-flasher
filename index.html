@@ -27,14 +27,15 @@
       <li>Plug the watch in with USB-C.</li>
       <li>Click <strong>Connect</strong>, pick the watch's port, then <strong>Install</strong>.</li>
       <li>If no port appears, hold <kbd>BOOT</kbd>, tap <kbd>PWR</kbd>, release <kbd>BOOT</kbd>, then Connect again.</li>
-      <li>When Chrome asks for Wi-Fi, enter your home <strong>2.4 GHz</strong> network. Leave the server URL unset for now.</li>
-      <li>If that dialog does not appear, join the open Wi-Fi <strong>Keithpod-setup</strong> on your phone, open <a href="http://192.168.4.1">http://192.168.4.1</a>, and enter Wi-Fi there. Copy the device secret shown on that page.</li>
+      <li><strong>Updating</strong> a watch that is already set up: choose <em>not</em> to erase. Nothing else to do.</li>
+      <li><strong>New watch:</strong> Wi-Fi is optional now (the phone app uses Bluetooth). Close the Wi-Fi dialog if Chrome shows one. The watch then shows a setup screen with its <strong>device secret</strong>: write it down (or join the <strong>Keithpod-setup</strong> Wi-Fi, open <a href="http://192.168.4.1">http://192.168.4.1</a> and copy it), then hold <kbd>BOOT</kbd> for 2 seconds to skip Wi-Fi.</li>
+      <li>Pair the watch in the <strong>Keithpod Companion</strong> Android app: tap <em>Pair watch</em> and type the 6-digit code the watch shows. To pair a different phone later, double-tap <kbd>BOOT</kbd> on the 5-second boot screen.</li>
     </ol>
     <esp-web-tools-install-button manifest="./manifest.json"></esp-web-tools-install-button>
-    <p class="warn">First flash: erasing is fine. Do <strong>not</strong> erase when updating, or the watch forgets Wi-Fi and the device secret, and clips already on the card can no longer be decrypted.</p>
+    <p class="warn">First flash: erasing is fine. Do <strong>not</strong> erase when updating, or the watch forgets the device secret and its paired phone, and clips already on the card or the phone can no longer be decrypted.</p>
   </div>
 
-  <p>Firmware <strong>v0.4.0</strong> turns the screen off after 8 seconds (raise your wrist, touch the screen, or tap PWR to wake it). Recording keeps going while the screen is dark. After flashing, a FAT32 microSD card (32 GB or smaller is simplest) lets the watch save clips until a server is set up. Serial logs are at <strong>115200</strong> baud if anything looks wrong.</p>
+  <p>Firmware <strong>v0.5.0</strong> sends clips to your phone over Bluetooth LE (encrypted end to end with the device secret; the watch deletes a clip only after the phone confirms its checksum) and gets its clock from the phone, so the watch's Wi-Fi stays off. A FAT32 microSD card (32 GB or smaller is simplest) holds clips while the phone is away. The screen turns off after 8 seconds (raise your wrist, touch it, or tap PWR to wake it). Serial logs are at <strong>115200</strong> baud if anything looks wrong.</p>
   <p>This page is static, costs nothing, and stores no secrets. Firmware source and longer notes live with the keithpod firmware tree (<code>FIRMWARE.md</code>).</p>
 </body>
 </html>
