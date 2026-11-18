@@ -2,7 +2,7 @@
 
 Static ESP Web Tools page for the Waveshare ESP32-S3-Touch-AMOLED-2.06 watch. MIT. No secrets.
 
-Intended to be served as GitHub Pages at `https://daddymean.github.io/keithpod-flasher/` from a public `Daddymean/keithpod-flasher` repository (this folder only: the page, the manifest, and the merged factory `.bin`). Until that repo exists, flash with [esptool-js](https://espressif.github.io/esptool-js/): Connect, 115200 baud, write `keithpod-waveshare_amoled206-factory.bin` at offset `0x0`.
+Intended to be served as GitHub Pages at `https://daddymean.github.io/keithpod-flasher/` from a public `Daddymean/keithpod-flasher` repository (this folder only: the page, the manifest, and the merged factory `.bin`). Firmware v0.4.0: the AMOLED sleeps after 8 s and wakes on wrist raise, touch, or PWR. Recording keeps going while the screen is dark.
 
 Rebuild the binary from `firmware/keithpod`:
 
